@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+message OneKind {
+  string value = 1;
+}
+
+message AnotherKind {
+  string value = 2;
+}
+
+message DemoBrokenCbor {
+    oneof payload {
+      OneKind one_kind = 1;
+      AnotherKind another_kind = 2;
+    }
+}
+  
